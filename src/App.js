@@ -36,7 +36,7 @@ const Battle = () => (
   <center>
     <Form inline>
       <FormGroup controlId="formInlineName">
-        <InputGroup>
+        <InputGroup bsSize="large">
           <Col sm={8} mdOffset={4}>
             <h4>Player One</h4>
             <FormControl type="text" placeholder="Github user" />
@@ -69,7 +69,7 @@ class App extends Component {
           <Home />
         </div>
         <div>
-        <Battle />
+          <Battle />
         </div>
       </div>
     );
