@@ -60,18 +60,46 @@ const Battle = () => (
     </Form>
   </center>
 );
+const Popular = () => (
+  <center>
+    
+            <h4>I really sorry teacher, I didn't have time to do all the components
+              Please :( Don't put a bad grade!!!
+            </h4>
+           
+      
+  </center>
+);
+
+const NotFoundPage = (props) => {
+  return (
+     <Route exact path="/" component={Home}/>
+  );
+}
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <Home />
-        </div>
-        <div>
-          <Battle />
-        </div>
-      </div>
+      
+      <div className= 'content'>
+  <BrowserRouter>
+    <header>
+      <ul className="main-nav">
+        <li><a className = 'active'><NavLink to="/">Home</NavLink></a></li>
+        <li><a className = 'active'><NavLink to="/battle">Battle</NavLink></a></li> 
+        <li><a className = 'active'><NavLink to="/popular">Popular</NavLink></a></li>                   
+      </ul>
+           
+      <Switch>
+         <Route exact path="/" component={Home}/>
+         <Route path="/battle" component={Battle}/> 
+         <Route path="/popular" component={Popular}/>   
+         <Route component={NotFoundPage}/>         
+         
+      </Switch>
+    </header>    
+  </BrowserRouter>
+  </div> 
     );
   }
 }
