@@ -1,21 +1,26 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "react-bootstrap";
-import { FormGroup } from "react-bootstrap";
-import { FormControl } from "react-bootstrap";
-import { Form } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { ControlLabel } from "react-bootstrap";
-import { InputGroup } from "react-bootstrap";
+
+import { InputGroup,
+Grid,
+Button,
+FormControl,
+FormGroup,
+Form,
+Col,
+Thumbnail,
+Row,
+} from "react-bootstrap";
 import {
   BrowserRouter,
   Route,
   Switch,
   NavLink,
-  NavNavLink,
   Redirect
 } from "react-router-dom";
+
+
 
 const Home = () => (
   <div>
@@ -31,6 +36,43 @@ const Home = () => (
     </center>
   </div>
 );
+
+const Result = ()=>(
+  <Grid>
+  <Row>
+  <Col xs={6} md={4}>
+    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+      <h3>Thumbnail label</h3>
+      <p>Description</p>
+      <p>
+        <Button bsStyle="primary">Button</Button>&nbsp;
+        <Button bsStyle="default">Button</Button>
+      </p>
+    </Thumbnail>
+  </Col>
+  <Col xs={6} md={4}>
+    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+      <h3>Thumbnail label</h3>
+      <p>Description</p>
+      <p>
+        <Button bsStyle="primary">Button</Button>&nbsp;
+        <Button bsStyle="default">Button</Button>
+      </p>
+    </Thumbnail>
+  </Col>
+  <Col xs={6} md={4}>
+    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+      <h3>Thumbnail label</h3>
+      <p>Description</p>
+      <p>
+        <Button bsStyle="primary">Button</Button>&nbsp;
+        <Button bsStyle="default">Button</Button>
+      </p>
+    </Thumbnail>
+  </Col>
+  </Row>
+</Grid>
+)
 
 const Battle = () => (
   <center>
@@ -76,6 +118,8 @@ const NotFoundPage = (props) => {
      <Route exact path="/" component={Home}/>
   );
 }
+
+
 
 class App extends Component {
   render() {
