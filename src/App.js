@@ -20,59 +20,101 @@ import {
   Redirect
 } from "react-router-dom";
 
-
-
-const Home = () => (
-  <div>
-    <h2>
-      <center>
-        <strong>Github Battle: Battle your friends... and stuff.</strong>
-      </center>
-    </h2>
-    <center>
-      <Button bsStyle="primary" bsSize="large">
-        Battle
-      </Button>
-    </center>
+const result= ()=>(
+  <div className="container">
+    <div className="[ col-sm-6 col-md-offset-2 col-md-4 ]">
+      <div className="[ info-card ]">
+        <img
+          style={{ width: "100%" }}
+          src="https://avatars.githubusercontent.com/u/564874?v=3"
+        />
+        <div className="[ info-card-details ] animate">
+          <div className="[ info-card-header ]">
+            <h1> Robert McIntosh </h1>
+            <h3> Tipo de seguro </h3>
+          </div>
+          <div className="[ info-card-detail ]">
+            {/* Description */}
+            <p>
+              Resultado de los datos procesados. 
+            </p>
+            <div className="social">
+              <a
+                href="https://www.facebook.com/rem.mcintosh"
+                className="[ social-icon facebook ] animate"
+              >
+                <span className="fa fa-facebook" />
+              </a>
+              <a
+                href="https://twitter.com/Mouse0270"
+                className="[ social-icon twitter ] animate"
+              >
+                <span className="fa fa-twitter" />
+              </a>
+              <a
+                href="https://github.com/mouse0270"
+                className="[ social-icon github ] animate"
+              >
+                <span className="fa fa-github-alt" />
+              </a>
+              <a
+                href="https://plus.google.com/u/0/115077481218689845626/posts"
+                className="[ social-icon google-plus ] animate"
+              >
+                <span className="fa fa-google-plus" />
+              </a>
+              <a
+                href="www.linkedin.com/in/remcintosh/"
+                className="[ social-icon linkedin ] animate"
+              >
+                <span className="fa fa-linkedin" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
-const Result = ()=>(
-  <Grid>
-  <Row>
-  <Col xs={6} md={4}>
-    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
-      <h3>Thumbnail label</h3>
-      <p>Description</p>
-      <p>
-        <Button bsStyle="primary">Button</Button>&nbsp;
-        <Button bsStyle="default">Button</Button>
-      </p>
-    </Thumbnail>
-  </Col>
-  <Col xs={6} md={4}>
-    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
-      <h3>Thumbnail label</h3>
-      <p>Description</p>
-      <p>
-        <Button bsStyle="primary">Button</Button>&nbsp;
-        <Button bsStyle="default">Button</Button>
-      </p>
-    </Thumbnail>
-  </Col>
-  <Col xs={6} md={4}>
-    <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
-      <h3>Thumbnail label</h3>
-      <p>Description</p>
-      <p>
-        <Button bsStyle="primary">Button</Button>&nbsp;
-        <Button bsStyle="default">Button</Button>
-      </p>
-    </Thumbnail>
-  </Col>
-  </Row>
-</Grid>
-)
+// const Result = ()=>(
+//   <Grid>
+//   <Row>
+//   <Col xs={6} md={4}>
+//     <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+//       <h3>Thumbnail label</h3>
+//       <p>Description</p>
+//       <p>
+//         <Button bsStyle="primary">Button</Button>&nbsp;
+//         <Button bsStyle="default">Button</Button>
+//       </p>
+//     </Thumbnail>
+//   </Col>
+//   <Col xs={6} md={4}>
+//     <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+//       <h3>Thumbnail label</h3>
+//       <p>Description</p>
+//       <p>
+//         <Button bsStyle="primary">Button</Button>&nbsp;
+//         <Button bsStyle="default">Button</Button>
+//       </p>
+//     </Thumbnail>
+//   </Col>
+//   <Col xs={6} md={4}>
+//     <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
+//       <h3>Thumbnail label</h3>
+//       <p>Description</p>
+//       <p>
+//         <Button bsStyle="primary">Button</Button>&nbsp;
+//         <Button bsStyle="default">Button</Button>
+//       </p>
+//     </Thumbnail>
+//   </Col>
+//   </Row>
+// </Grid>
+// )
+
+
 
 const Battle = () => (
   <center>
